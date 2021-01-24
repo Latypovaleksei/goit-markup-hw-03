@@ -20,9 +20,31 @@ body {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
 
 li {
   list-style-type: none;
+}
+
+.container {
+  width: 1600px;
+  padding-left: 215px;
+  padding-right: 215px;
+  margin: 0 auto;
 }
 
 /* Logo */
@@ -33,6 +55,9 @@ li {
   font-size: 26px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 a.logo-footer {
@@ -49,6 +74,24 @@ a.logo-footer {
   color: var(--active-color);
 }
 
+.header.container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
 .navigation-list a {
   color: var(--main-text-color);
 }
@@ -59,6 +102,10 @@ a.logo-footer {
   letter-spacing: 0.02em;
 }
 
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .navigation-item a:hover {
   color: var(--active-color);
 }
@@ -67,19 +114,29 @@ a.logo-footer {
   color: var(--active-color);
 }
 
-.contacts a {
+.contacts-list a {
   color: var(--second-color);
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
 
-.contacts a:hover {
+.contacts-list a:hover {
   color: var(--active-color);
 }
 
-.contacts a:focus {
+.contacts-list a:focus {
   color: var(--active-color);
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contact-mail {
+  margin-right: 50px;
 }
 
 /* Блок "Шапка" */
