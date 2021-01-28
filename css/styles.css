@@ -8,6 +8,9 @@
   --section-our-team-color: #f5f4fa;
   --contacts-foter-text-color: rgba(255, 255, 255, 0.6);
   --border-color: #eeeeee;
+  --color-shadow1: rgba(0, 0, 0, 0.12);
+  --color-shadow2: rgba(0, 0, 0, 0.14);
+  --color-shadow3: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -49,6 +52,10 @@ li {
   margin: 0 auto;
 }
 
+.sections {
+  padding-bottom: 94px;
+}
+
 /* Logo */
 .logo {
   font-family: Raleway, sans-serif;
@@ -87,6 +94,10 @@ a.logo-footer {
   display: flex;
   height: 80px;
   align-items: center;
+}
+
+.header a {
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -149,26 +160,29 @@ a.logo-footer {
 }
 
 /* Блок "Шапка" */
+.section-hero {
+  background-color: var(--background-hero-footer);
+  padding-bottom: 200px;
+  min-height: 600px;
+}
+
 .section-hero .container {
-  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.section-hero {
-  background-color: var(--background-hero-footer);
-}
-
 .hero-title {
   color: var(--main-color);
+  min-height: 120px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 200px;
+  margin-top: 200px;
+  margin-bottom: 30px;
 }
 
 .hero-button {
@@ -184,9 +198,10 @@ a.logo-footer {
   justify-content: center;
   min-width: 200px;
   min-height: 50px;
-  margin-top: 20px;
   letter-spacing: 0.06em;
   cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
 }
 
 /* Titles section*/
@@ -196,8 +211,7 @@ a.logo-footer {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* Блок "Особенности" */
@@ -206,13 +220,12 @@ a.logo-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 101px;
-  padding-top: 94px;
 }
 
 .section-features-list {
   display: flex;
   align-items: center;
+  margin-top: 94px;
 }
 
 .box-feature {
@@ -232,6 +245,7 @@ a.logo-footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   max-width: 270px;
+  margin-bottom: 10px;
 }
 
 .section-features p {
@@ -239,15 +253,14 @@ a.logo-footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   max-width: 270px;
-  padding-top: 10px;
-  margin-top: 0;
+  margin: 0;
 }
 
 /* Блок "Чем мы занимаемся" */
 .section-what-are-we-doing .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 94px;
 }
 
 .what-are-we-doing-list {
@@ -266,8 +279,12 @@ a.logo-footer {
 
 .section-our-team .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-bottom: 94px;
+}
+
+.section-our-team .title-section {
+  margin-top: 94px;
 }
 
 .section-our-team-list {
@@ -281,6 +298,17 @@ a.logo-footer {
   background-color: var(--main-color);
   width: 270px;
   height: 368px;
+  box-shadow: 0px 1px 3px var(--color-shadow1), 0px 1px 1px var(--color-shadow2),
+    0px 2px 1px var(--color-shadow3);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.box-text-our-team-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .section-our-team-item:not(:last-child) {
@@ -293,7 +321,7 @@ a.logo-footer {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 30px;
+  margin-bottom: 10px;
 }
 
 .section-our-team p {
@@ -302,7 +330,6 @@ a.logo-footer {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 10px;
   margin: 0;
 }
 
@@ -341,11 +368,10 @@ a.phone-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 /* под-Блок "filters"*/
 .filters {
+  margin-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -391,8 +417,6 @@ a.phone-footer {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* margin-right: -30px;
-  margin-top: -30px;*/
 }
 
 .projects-list .project-item {
@@ -400,9 +424,14 @@ a.phone-footer {
   margin-bottom: 30px;
 }
 
+.box-text-project-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+}
+
 .project-item {
-  min-width: 370px;
-  min-height: 404px;
+  max-height: 402px;
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -413,19 +442,12 @@ a.phone-footer {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding-top: 20px;
+  margin-bottom: 4px;
 }
 .projects-list p {
   color: var(--second-color);
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  padding-top: 4px;
-  padding-bottom: 20px;
-}
-
-.projects-list h2,
-.projects-list p {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin: 0;
 }
