@@ -1,0 +1,239 @@
+:root {
+  --main-text-color: rgba(33, 33, 33, 1);
+  --secondary-text-color: rgba(117, 117, 117, 1);
+  --third-text-color: rgba(255, 255, 255, 0.6);
+  --highlighting-color: rgba(33, 150, 243, 1);
+  --main-color: rgba(255, 255, 255, 1);
+  --secondary-background-color: rgba(47, 48, 58, 1);
+  --third-background-color: rgba(245, 244, 250, 1);
+  --bt-hover: rgba(24, 140, 232, 1);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 1600px;
+  background-color: var(--main-color);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Верхняя линия */
+/* блок Логотип */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.logo-web {
+  color: var(--highlighting-color);
+}
+
+/* блок Навигация */
+.nav-item a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+  color: var(--highlighting-color);
+}
+
+.current-page a {
+  color: var(--highlighting-color);
+}
+
+/* блок Контакты */
+.contact-item a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.contact-item a:hover,
+.contact-item a:focus {
+  color: var(--highlighting-color);
+}
+
+/* Основная страница */
+/* Шапка */
+.section-hero {
+  background-color: var(--secondary-background-color);
+}
+
+.hero-title {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bt-hero {
+  background-color: var(--highlighting-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.bt-hero:hover {
+  cursor: pointer;
+  background-color: var(--bt-hover);
+}
+
+/* Особенности */
+
+.feature-item h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+
+.feature-item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+/* Чем мы занимаемся + Наша команда */
+.titles-sections {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+/* Наша команда */
+.team-section {
+  background-color: var(--third-background-color);
+}
+
+.team-item .names {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.team-item .profession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+/* страница Портфолио */
+/* блок Фильтры */
+.filters-item button {
+  background-color: var(--third-background-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-style: unset;
+  border-radius: 4px;
+  color: var(--main-text-color);
+}
+
+.filters-item button:hover,
+.filters-item button:focus {
+  cursor: pointer;
+  background-color: var(--highlighting-color);
+  color: var(--main-color);
+}
+
+/* блок Работы */
+.name-product {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+}
+
+.type-product {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+/* Подвал */
+.footer {
+  background-color: var(--secondary-background-color);
+}
+/* блок Логотип */
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+/* блок Адрес */
+.address-list {
+  font-style: normal;
+}
+
+.address-item a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--third-text-color);
+}
+
+.address-item a:hover,
+.address-item a:focus {
+  color: var(--highlighting-color);
+}
+
+.address-item .location {
+  color: var(--main-color);
+}
