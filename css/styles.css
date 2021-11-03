@@ -11,6 +11,10 @@
   --box-shadow-fotocard: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --shadow-bt-hero: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-bt-filter: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --works-border: 1px solid #eeeeee;
+  --works-item-gap: 30px;
 }
 
 a {
@@ -29,6 +33,8 @@ p {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -296,6 +302,16 @@ section.team {
 
 /* страница Портфолио */
 /* блок Фильтры */
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filters-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filters-item button {
   background-color: var(--third-background-color);
   font-weight: 500;
@@ -306,6 +322,8 @@ section.team {
   border-style: unset;
   border-radius: 4px;
   color: var(--main-text-color);
+
+  padding: 6px 22px;
 }
 
 .filters-item button:hover,
@@ -313,15 +331,39 @@ section.team {
   cursor: pointer;
   background-color: var(--highlighting-color);
   color: var(--main-color);
+  box-shadow: var(--shadow-bt-filter);
 }
 
 /* блок Работы */
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: calc(-1 * var(--works-item-gap));
+  margin-bottom: calc(-1 * var(--works-item-gap));
+}
+
+.works-item {
+  display: block;
+  width: 370px;
+  border: var(--works-border);
+  flex-basis: calc(100% / 3 - var(--works-item-gap));
+  margin-right: var(--works-item-gap);
+  margin-bottom: var(--works-item-gap);
+}
+
+.specification {
+  padding: 20px 24px;
+}
+
 .name-product {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
+
+  margin-bottom: 4px;
 }
 
 .type-product {
