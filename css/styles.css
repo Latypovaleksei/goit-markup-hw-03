@@ -38,7 +38,6 @@ img {
 }
 
 body {
-  max-width: 1600px;
   background-color: var(--main-color);
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -78,11 +77,16 @@ header a {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
+header {
+  border-bottom: var(--header-border);
+}
+
 .contаiner.header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: var(--header-border);
+  /* border-bottom: var(--header-border); */
 }
 
 /* блок Логотип */
@@ -224,6 +228,8 @@ header a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-text-color);
+
+  margin-bottom: 10px;
 }
 
 .feature-item p {
@@ -266,7 +272,6 @@ section.team {
 }
 
 .team-item {
-  display: inline-block;
   width: 270px;
   text-align: center;
 
@@ -290,6 +295,8 @@ section.team {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+
+  margin-bottom: 10px;
 }
 
 .team-item .profession {
@@ -344,9 +351,7 @@ section.team {
 }
 
 .works-item {
-  display: block;
   width: 370px;
-  border: var(--works-border);
   flex-basis: calc(100% / 3 - var(--works-item-gap));
   margin-right: var(--works-item-gap);
   margin-bottom: var(--works-item-gap);
@@ -354,6 +359,7 @@ section.team {
 
 .specification {
   padding: 20px 24px;
+  border: var(--works-border);
 }
 
 .name-product {
@@ -378,9 +384,9 @@ section.team {
 .footer {
   background-color: var(--secondary-background-color);
 }
-.footer .contаiner {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer a {
